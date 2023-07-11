@@ -1,13 +1,13 @@
-import 'package:untitled/linked_list.dart';
+import 'package:untitled/queue.dart';
 
 void main() {
-  LinkedList list = LinkedList();
-  list.append("I");
-  list.append("S");
-  list.append("L");
-  list.append("A");
-  list.append("M");
-  for (final element in list) {
-    print(element);
-  }
+  final queue = QueueList<String>();
+  queue.enqueue('Ray');
+  queue.enqueue('Brian');
+  queue.enqueue('Eric');
+  print(queue);
+  queue.dequeue();
+  print(queue);
+  queue.peek;
+  print(queue);
 }

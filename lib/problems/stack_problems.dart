@@ -1,5 +1,16 @@
-import 'stack.dart';
+import '../stack.dart';
 
+//challenge 1
+void reverse(List list) {
+  Stack stack = Stack.of(list);
+  Stack reversedStack = Stack.of([]);
+  while (stack.isNotEmpty) {
+    reversedStack.push(stack.pop());
+  }
+  print(reversedStack);
+}
+
+//challenge 2
 bool checkParentheses(String text) {
   final open = '('.codeUnitAt(0);
   final close = ')'.codeUnitAt(0);
@@ -17,13 +28,4 @@ bool checkParentheses(String text) {
     }
   }
   return stack.isEmpty;
-}
-
-void reverse(List list) {
-  Stack stack = Stack.of(list);
-  Stack reversedStack = Stack.of([]);
-  while (stack.isNotEmpty) {
-    reversedStack.push(stack.pop());
-  }
-  print(reversedStack);
 }
